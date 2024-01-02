@@ -147,10 +147,9 @@ for i = 1, 100, 1 do
 end
 
 Bar.Loading.Text = "l: Waiting for Server Response"
-
-Bar.Loading.Text = "l: Ready! Waiting 5 Seconds"
+repeat task.wait() until getgenv().Ready == true
+Bar.Loading.Text = "l: Ready!"
 task.wait(1)
 UI:Destroy()
 
-task.wait(5)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/PetSimulator99/main/redz9999.lua"))()
