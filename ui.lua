@@ -146,7 +146,7 @@ for i = 1, 100, 1 do
     task.wait(lTime / 100)
 end
 
-Bar.Loading.Text = "l: Waiting for Server Response"
+Bar.Loading.Text = "l: Waiting for Server Response (MIGHT TAKE A WHILE)"
 repeat task.wait() until getgenv().Ready == true
 Bar.Loading.Text = "l: Ready!"
 task.wait(1)
